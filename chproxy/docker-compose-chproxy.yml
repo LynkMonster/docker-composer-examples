@@ -1,0 +1,10 @@
+version: '3'
+services:
+  chproxy:
+    image: contentsquareplatform/chproxy:v1.24.0-amd64
+    volumes:
+      - ./chproxy-conf.yml:/config.yml
+      - ./chproxy-data:/data
+    ports:
+      - 7070:7070
+    command: -config /config.yml

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  apm-server:
+    image: elastic/apm-server:8.7.1
+    volumes:
+      - ./apm-server.yml:/usr/share/apm-server/apm-server.yml
+    ports:
+      - 8200:8200
